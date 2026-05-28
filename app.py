@@ -18,7 +18,7 @@ def now_utc() -> str:
 app = Flask(__name__)
 
 # ── Config ───────────────────────────────────────────────────
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyDfzuY3a-ol_p6gF3FWP-XcmSGDVIlZoQQ")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "xxxxxxxxxxxxxxxxxxxxxxxxxxx")
 DATA_FILE      = "data/conversations.json"
 MODEL_NAME = "gemini-2.5-flash"
 
