@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alok's AI{% if active_conv %} — {{ active_conv.title }}{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fira+Code:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     SIDEBAR
+════════════════════════════════════ -->
+<aside class="sidebar">
+
+  <div class="sidebar-header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="logo-text">Alok's AI</span>
+    </div>
+  </div>
+
+  <!-- New chat is a form POST -->
+  <form action="/new" method="POST">
+    <button type="submit" class="new-chat-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      New conversation
+    </button>
+  </form>
+
+  <div class="conversations-section">
+    <p class="section-label">Recent</p>
+
+    {% if sidebar %}
+      <ul class="conversation-list">
+        {% for conv in sidebar %}
+        <li class="conv-item {% if active_conv and active_conv.id == conv.id %}active{% endif %}">
+          <!-- Link to open the chat -->
+          <a href="/chat/{{ conv.id }}" class="conv-link">
+            <div class="conv-item-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="conv-item-body">
+              <div class="conv-item-title">{{ conv.title }}</div>
+              <div class="conv-item-meta">{{ conv.message_count | default(conv.messages | length) }} messages</div>
+            </div>
+          </a>
+          <!-- Delete is a form POST -->
+          <form action="/chat/{{ conv.id }}/delete" method="POST" class="delete-form"
+                onsubmit="return confirm('Delete this conversation?')">
+            <button type="submit" class="conv-delete-btn" title="Delete">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="no-conversations">No conversations yet.<br>Start a new chat!</p>
+    {% endif %}
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="model-badge">
+      <div class="model-dot"></div>
+      Gemini 1.5 Flash
+    </div>
+  </div>
+
+</aside>
+
+<!-- ═══════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════ -->
+<main class="main-content">
+
+  <header class="topbar">
+    <div class="topbar-title">
+      {% if active_conv %}{{ active_conv.title }}{% else %}Alok's AI{% endif %}
+    </div>
+    {% if active_conv %}
+    <form action="/chat/{{ active_conv.id }}/delete" method="POST"
+          onsubmit="return confirm('Delete this conversation?')">
+      <button type="submit" class="icon-btn" title="Delete conversation">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+    {% endif %}
+  </header>
+
+  <!-- ── Welcome screen ── -->
+  {% if not active_conv %}
+  <div class="welcome-screen">
+    <div class="welcome-glow"></div>
+    <div class="welcome-content">
+      <div class="welcome-icon">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1 class="welcome-title">Hello, I'm <span>Alok's AI</span></h1>
+      <p class="welcome-subtitle">
+        <br>
+        Start a new conversation to begin.
+      </p>
+      <!-- Quick-start chips each submit a new chat form -->
+      <div class="welcome-chips">
+        <form action="/new" method="POST">
+          <button type="submit" class="chip">Known about Alok</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Active chat ── -->
+  {% else %}
+  <div class="chat-area">
+    <div class="messages-container" id="bottom">
+
+      {% if not messages %}
+        <p class="empty-chat">Send a message to start the conversation.</p>
+      {% endif %}
+
+      {% if error == "empty" %}
+        <div class="alert">Please type a message before sending.</div>
+      {% endif %}
+
+      {% for msg in messages %}
+      <div class="message {{ msg.role }}">
+
+        <div class="avatar">{{ "U" if msg.role == "user" else "N" }}</div>
+
+        <div class="bubble-wrapper">
+          <div class="bubble">
+            {% if msg.role == "user" %}
+              {# User text shown as plain text (preserve newlines) #}
+              {{ msg.content | e | replace('\n', ' ') | safe }}
+            {% else %}
+              {# AI text shown as plain text too — no JS markdown parser needed #}
+              {# We do basic pre-wrap so code blocks look decent #}
+              {{ msg.content | e | replace('\n', ' ') | safe }}
+            {% endif %}
+          </div>
+          <div class="message-meta">
+            <span class="message-time">{{ msg.timestamp | ftime }}</span>
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div><!-- /messages-container -->
+  </div><!-- /chat-area -->
+  {% endif %}
+
+  <!-- ── Input form ── -->
+  <div class="input-area">
+    {% if active_conv %}
+    <form action="/chat/{{ active_conv.id }}/send" method="POST" class="input-form">
+      <div class="input-wrapper">
+        <textarea
+          name="message"
+          placeholder="Message Alok's AI…"
+          rows="1"
+          maxlength="8000"
+          required
+          autofocus
+        ></textarea>
+        <button type="submit" class="send-btn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"
+                  stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+    {% else %}
+    
+    {% endif %}
+    <p class="input-hint">Alok's AI can make mistakes. Verify important information.</p>
+  </div>
+
+</main>
+
+<!-- Tiny inline script only for the delete confirm dialogs — purely optional,
+     remove this block if you want ZERO script tags at all -->
+<script>
+  // Scroll to the latest message on page load
+  var bottom = document.getElementById("bottom");
+  if (bottom) bottom.scrollIntoView(false);
+</script>
+
+</body>
+</html>

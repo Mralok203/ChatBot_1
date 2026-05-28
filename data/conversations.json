@@ -1,0 +1,362 @@
+{
+  "3cfc2106-f513-40d8-ba93-b3030a05d202": {
+    "id": "3cfc2106-f513-40d8-ba93-b3030a05d202",
+    "title": "what is python",
+    "created_at": "2026-05-28T09:07:00.467232",
+    "updated_at": "2026-05-28T09:08:47.272296",
+    "messages": [
+      {
+        "id": "e9e6e9fd-adde-44e1-96ec-10ee8ab356f7",
+        "role": "user",
+        "content": "what is python",
+        "timestamp": "2026-05-28T09:07:11.684181"
+      },
+      {
+        "id": "08c5220b-f07e-46cb-ba16-e347a92a985d",
+        "role": "assistant",
+        "content": "⚠️ Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+        "timestamp": "2026-05-28T09:07:12.145788"
+      },
+      {
+        "id": "992fde33-a2ea-4fbf-bce5-ad04b3d9fcc2",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:07:34.673070"
+      },
+      {
+        "id": "c416aebf-5a1b-4ff9-93f8-28cc978b4b04",
+        "role": "assistant",
+        "content": "⚠️ Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+        "timestamp": "2026-05-28T09:07:34.837170"
+      },
+      {
+        "id": "d3d5bdf1-3f7d-4997-a016-dc6f6934f6ec",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:08:46.492149"
+      },
+      {
+        "id": "ac146abb-54ef-4281-8344-1469f4bf5b96",
+        "role": "assistant",
+        "content": "⚠️ API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T09:08:47.272211"
+      }
+    ]
+  },
+  "b467c3ad-276f-4148-8753-5b613b4163c5": {
+    "id": "b467c3ad-276f-4148-8753-5b613b4163c5",
+    "title": "hii",
+    "created_at": "2026-05-28T09:09:08.816645",
+    "updated_at": "2026-05-28T09:09:14.047685",
+    "messages": [
+      {
+        "id": "14d998a5-e24e-4224-a8a8-cfd54a49ad43",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:09:13.353249"
+      },
+      {
+        "id": "1d6dc4c3-d7e9-4b99-9cb0-0290954e1988",
+        "role": "assistant",
+        "content": "⚠️ API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T09:09:14.047556"
+      }
+    ]
+  },
+  "a0638b41-e51a-4cdf-a0da-328f34ca6edf": {
+    "id": "a0638b41-e51a-4cdf-a0da-328f34ca6edf",
+    "title": "hiii",
+    "created_at": "2026-05-28T09:15:44.524627",
+    "updated_at": "2026-05-28T09:15:51.134151",
+    "messages": [
+      {
+        "id": "5acbb0d0-c164-496e-9f54-4e994781bb37",
+        "role": "user",
+        "content": "hiii",
+        "timestamp": "2026-05-28T09:15:50.604875"
+      },
+      {
+        "id": "14108347-7db5-45c9-97be-8978799cb506",
+        "role": "assistant",
+        "content": "⚠️ Error: 404 models/gemini-1.5-flash-8b is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+        "timestamp": "2026-05-28T09:15:51.134030"
+      }
+    ]
+  },
+  "5a8435c9-d8c3-46c5-bb76-a6fadaac976b": {
+    "id": "5a8435c9-d8c3-46c5-bb76-a6fadaac976b",
+    "title": "hii",
+    "created_at": "2026-05-28T09:17:09.417271",
+    "updated_at": "2026-05-28T09:19:58.073867",
+    "messages": [
+      {
+        "id": "0fc4547f-62b8-4cdf-ab02-47ee0aba9932",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:17:13.673451"
+      },
+      {
+        "id": "cd50659f-c871-42d7-b1f0-f1d28f4e4af5",
+        "role": "assistant",
+        "content": "⚠️ Error: 404 models/gemini-1.5-flash-8b is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+        "timestamp": "2026-05-28T09:17:14.064940"
+      },
+      {
+        "id": "5397f8ab-beb5-46bf-8abc-5caa7ad105f1",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:19:10.960862"
+      },
+      {
+        "id": "310cc9ea-fc29-4751-aac4-c37818c46851",
+        "role": "assistant",
+        "content": "⚠️ Invalid API Key — open app.py and replace YOUR_GEMINI_API_KEY_HERE with your real key from https://aistudio.google.com/app/apikey",
+        "timestamp": "2026-05-28T09:19:12.993001"
+      },
+      {
+        "id": "67e9b621-20a8-4187-886e-dfa56672c58c",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T09:19:54.489396"
+      },
+      {
+        "id": "186b2835-c8d5-4c81-ad50-f6e5d6d3b1a2",
+        "role": "assistant",
+        "content": "Hello there! It seems like you might be having some trouble with an API key or model access based on the previous messages.\n\nIf you're trying to use a Google Gemini model, you'll need to make sure you have:\n\n1.  **A valid API key:** You can get one from [Google AI Studio](https://aistudio.google.com/app/apikey).\n2.  **The correct model name:** For example, `gemini-pro` or `gemini-1.5-flash`.\n3.  **The correct API version and endpoint.**\n\nCould you tell me a bit more about what you're trying to do? I'd be happy to help you troubleshoot!",
+        "timestamp": "2026-05-28T09:19:58.073748"
+      }
+    ]
+  },
+  "85fb0f83-c5f1-478d-8b02-febffe18945b": {
+    "id": "85fb0f83-c5f1-478d-8b02-febffe18945b",
+    "title": "who is alok",
+    "created_at": "2026-05-28T11:53:02.024428",
+    "updated_at": "2026-05-28T11:53:16.001514",
+    "messages": [
+      {
+        "id": "7c885bd7-f668-4d48-adf9-e943106cb145",
+        "role": "user",
+        "content": "who is alok",
+        "timestamp": "2026-05-28T11:53:11.069457"
+      },
+      {
+        "id": "ce6df887-ccfe-4d2d-9c21-f04cf8e30d6e",
+        "role": "assistant",
+        "content": "I'm Alok's AI assistant! He's the person who created me and who I help out. You could say he's my user, and I'm here to assist him with various tasks and information.",
+        "timestamp": "2026-05-28T11:53:13.959023"
+      },
+      {
+        "id": "4e02e4a2-541e-402b-99d2-54aadcad59a0",
+        "role": "user",
+        "content": "who is alok",
+        "timestamp": "2026-05-28T11:53:14.366754"
+      },
+      {
+        "id": "d94cd446-856a-4607-af36-eb5bce54cd65",
+        "role": "assistant",
+        "content": "I'm Alok's AI! He's the person who made me and the one I assist. Think of him as my user, and I'm here to help him out with whatever he needs.",
+        "timestamp": "2026-05-28T11:53:16.001490"
+      }
+    ]
+  },
+  "e7899263-253b-40e8-b9ff-5e9885640142": {
+    "id": "e7899263-253b-40e8-b9ff-5e9885640142",
+    "title": "role",
+    "created_at": "2026-05-28T12:13:13.240822",
+    "updated_at": "2026-05-28T12:21:51.613920",
+    "messages": [
+      {
+        "id": "2e7d7713-8943-4b47-9edd-33ddd236c181",
+        "role": "user",
+        "content": "role",
+        "timestamp": "2026-05-28T12:13:34.371289"
+      },
+      {
+        "id": "ca42ded0-f9e8-4c02-b81f-ef0fc20b6726",
+        "role": "assistant",
+        "content": "Alok is an AI/ML Engineer Intern.",
+        "timestamp": "2026-05-28T12:13:36.511689"
+      },
+      {
+        "id": "a995fff1-0df1-4ba2-abb5-079c85fe0593",
+        "role": "user",
+        "content": "experience",
+        "timestamp": "2026-05-28T12:13:58.251918"
+      },
+      {
+        "id": "6f9cd339-88a3-44c7-a37c-eb7d26d06db2",
+        "role": "assistant",
+        "content": "Alok has experience as an AI Intern at Smaket AI, a Data Science Intern at NullClass, and a Software Development Intern at KTech.",
+        "timestamp": "2026-05-28T12:14:00.062701"
+      },
+      {
+        "id": "20d36679-6b31-4e4d-ae07-3a391d0117e0",
+        "role": "user",
+        "content": "Experience",
+        "timestamp": "2026-05-28T12:14:11.814801"
+      },
+      {
+        "id": "59237993-eb95-4ca7-9d1f-436c7e2f3138",
+        "role": "assistant",
+        "content": "Alok's experience includes:\n*   AI Intern at Smaket AI\n*   Data Science Intern at NullClass\n*   Software Development Intern at KTech",
+        "timestamp": "2026-05-28T12:14:13.877923"
+      },
+      {
+        "id": "c7e0f753-a02f-4e1d-a8c6-99eb55029dd4",
+        "role": "user",
+        "content": "linkdin",
+        "timestamp": "2026-05-28T12:14:34.631938"
+      },
+      {
+        "id": "43e89b11-22cb-41c1-9073-4924701b5a31",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:14:35.282628"
+      },
+      {
+        "id": "07f096a2-b3f7-4159-97e9-c03cb9fef942",
+        "role": "user",
+        "content": "experience",
+        "timestamp": "2026-05-28T12:14:50.165841"
+      },
+      {
+        "id": "1dcfc45f-d3f3-4711-9808-38c6e512d1f2",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:14:50.643039"
+      },
+      {
+        "id": "9a9ac018-d9fb-4f74-9337-e584e14d5b74",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:14:58.823694"
+      },
+      {
+        "id": "1303d8b4-c856-414b-a136-d0cb4d34dc78",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:14:59.453365"
+      },
+      {
+        "id": "244cb102-6b7c-43ab-b784-34c14e98690c",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:16:11.938543"
+      },
+      {
+        "id": "f23c3a08-7cc1-4a7d-afba-b39eaa581983",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:16:12.888114"
+      },
+      {
+        "id": "42502fbf-34fb-4ee9-8f00-993de85baea2",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:17:59.413889"
+      },
+      {
+        "id": "ac58a03b-0e40-461c-a3ea-130c3677e0fd",
+        "role": "assistant",
+        "content": " Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+        "timestamp": "2026-05-28T12:17:59.857806"
+      },
+      {
+        "id": "1e3bcc37-59fa-44f7-b530-d65f44870788",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:18:18.729439"
+      },
+      {
+        "id": "fb6ad052-605a-43c8-a62e-17ffa3853998",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:18:19.646367"
+      },
+      {
+        "id": "06d52ba1-db08-4014-84c9-d8abe9bad827",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:21:41.509514"
+      },
+      {
+        "id": "e405c131-4550-4008-bd18-a3a0a75f32f6",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:21:42.407487"
+      },
+      {
+        "id": "9a195281-8754-488d-81e0-3c0cb812fcc8",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:21:50.855404"
+      },
+      {
+        "id": "93826bb0-0949-4672-a141-998fa4bc3f19",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:21:51.613902"
+      }
+    ]
+  },
+  "a05d01b8-7e0d-4775-9a6d-92ef3c2525a3": {
+    "id": "a05d01b8-7e0d-4775-9a6d-92ef3c2525a3",
+    "title": "hii",
+    "created_at": "2026-05-28T12:21:59.297028",
+    "updated_at": "2026-05-28T12:22:04.620445",
+    "messages": [
+      {
+        "id": "699e609a-86e9-4472-808b-17a8fee93aa7",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:22:04.066933"
+      },
+      {
+        "id": "ad91740a-a44c-46d4-8beb-1ae3250c184c",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:22:04.620420"
+      }
+    ]
+  },
+  "2c28461e-6fda-4338-9263-178293728c81": {
+    "id": "2c28461e-6fda-4338-9263-178293728c81",
+    "title": "hii",
+    "created_at": "2026-05-28T12:23:03.230119",
+    "updated_at": "2026-05-28T12:23:08.420104",
+    "messages": [
+      {
+        "id": "cfb2eaac-6979-4cf9-9cf3-6158c2a64dc5",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:23:07.763903"
+      },
+      {
+        "id": "250421b0-00d6-4a3b-9b07-230a5e43a401",
+        "role": "assistant",
+        "content": " API Quota Exceeded — wait a moment and try again.",
+        "timestamp": "2026-05-28T12:23:08.420087"
+      }
+    ]
+  },
+  "5986ef9a-c8c0-479a-ba06-82b01961a873": {
+    "id": "5986ef9a-c8c0-479a-ba06-82b01961a873",
+    "title": "hii",
+    "created_at": "2026-05-28T12:40:13.373450",
+    "updated_at": "2026-05-28T12:40:23.274755",
+    "messages": [
+      {
+        "id": "44fab05c-8bf1-434c-9f55-e2f2929a4261",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "2026-05-28T12:40:19.578932"
+      },
+      {
+        "id": "67db000e-1c46-4eea-8820-03467c0919c2",
+        "role": "assistant",
+        "content": "Hello! How can I help you today?",
+        "timestamp": "2026-05-28T12:40:23.274493"
+      }
+    ]
+  }
+}
